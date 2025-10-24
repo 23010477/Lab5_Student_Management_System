@@ -12,15 +12,15 @@ public class Admin {
     }
 
     public void addStudent(Student student) {
-        listOfStudent.add(student);
-        System.out.Println("Student was added successfully");
+        listOfStudents.add(student);
+        System.out.println("Student was added successfully");
     }
 
     public void viewStudent() {
         int size = listOfStudents.size();
-        for (int i = 0; i < n - 1; i++) {
-            for (int j = 0; j < n - i - 1; j++) {
-                if (listOfStudents.get(j).getID() > listOfStudents.get(j + 1).getID()) {
+        for (int i = 0; i < size - 1; i++) {
+            for (int j = 0; j < size - i - 1; j++) {
+                if (listOfStudents.get(j).getStudentID() > listOfStudents.get(j + 1).getStudentID()) {
                     Student temp = listOfStudents.get(j);
                     listOfStudents.set(j, listOfStudents.get(j + 1));
                     listOfStudents.set(j + 1, temp);
@@ -50,7 +50,12 @@ else
 
 }
 public void searchStudent(int ID){
-
+        for(Student s:listOfStudents){
+            if(s.getStudentID()==ID)
+            {
+                System.out.println(s);
+            }
+        }
 }
 
 
