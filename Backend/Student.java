@@ -1,31 +1,12 @@
 package Backend;
 
-public class Student {
-    private String Name,department,gender,studentID;
+public class Student implements RecordsInterface {
+    private String studentID;
+    private String name;
     private int age;
+    private String gender;
+    private String department;
     private double gpa;
 
-
-public void AddStudent(String Name, int age,String studentID, String gender, String department, double gpa) {
-	
-}
-
-public Student[] GetListOfStudent() {
-	Student[] students = new Student[arraysize];
-	
-	return students;
-}
-
-public Student SearchStudent(String studentID) {
-	Student student = null;
-	return student;
-}
-public boolean UpdateStudent(String studentID, String name, int age, String gender, String department, double gpa) {
-	return true;
-}
-
-public boolean DeleteStudent(String studentID) {
-	return true;
-
-}
-}
+   
+    }
