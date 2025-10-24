@@ -16,7 +16,16 @@ public Student[] getListOfStudent() {
 	return students;
 }
 
+public Student Searchstudent(String studentID) {
+	Student student = null;
+	return student;
+}
+public boolean updateStudent(String studentID, String name, int age, String gender, String department, double gpa) {
+	return true;
+}
 
+public boolean deleteStudent(String studentID) {
+	return true;
 
 }
 }
