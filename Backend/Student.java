@@ -10,5 +10,13 @@ public void addstudent(String Name, int age,String studentID, String gender, Str
 	
 }
 
+public Student[] getListOfStudent() {
+	Student[] students = new Student[arraysize];
+	
+	return students;
+}
 
+
+
+}
 }
