@@ -57,9 +57,17 @@ public void searchStudent(int ID){
             }
         }
 }
- public void updateStudent(){
+ public void updateStudent(ٍStudent student){
+    System.out.println(student);
+    student.setGpa(GPA);
+    student.setStudentID(ID);
+    student.setAge(age);
+    student.setName(name);
+    student.setDepartment(department);
+    System.out.println("Information updated! ");
 
  }
+
 
 
 
