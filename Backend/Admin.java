@@ -9,6 +9,13 @@ public class Admin {
     public Admin(){
         listOfStudents=new ArrayList<Student>();
     }
+public void addStudent(Student student){
+        listOfStudent.add(student);
+        System.out.Println("Student was added successfully");
+}
+public void viewStudent(Student[] student){
+ 
+}
 
 
 
