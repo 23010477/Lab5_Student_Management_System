@@ -1,7 +1,15 @@
 package Backend;
 
-public class Admin {
-    public static void main(String[] args) {
 
+import java.util.ArrayList;
+
+public class Admin {
+   private ArrayList<Student> listOfStudents=new ArrayList<>();
+
+    public Admin(){
+        listOfStudents=new ArrayList<Student>();
     }
+
+
+
 }
