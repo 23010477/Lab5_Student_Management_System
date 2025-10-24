@@ -6,25 +6,25 @@ public class Student {
     private double gpa;
 
 
-public void addstudent(String Name, int age,String studentID, String gender, String department, double gpa) {
+public void AddStudent(String Name, int age,String studentID, String gender, String department, double gpa) {
 	
 }
 
-public Student[] getListOfStudent() {
+public Student[] GetListOfStudent() {
 	Student[] students = new Student[arraysize];
 	
 	return students;
 }
 
-public Student Searchstudent(String studentID) {
+public Student SearchStudent(String studentID) {
 	Student student = null;
 	return student;
 }
-public boolean updateStudent(String studentID, String name, int age, String gender, String department, double gpa) {
+public boolean UpdateStudent(String studentID, String name, int age, String gender, String department, double gpa) {
 	return true;
 }
 
-public boolean deleteStudent(String studentID) {
+public boolean DeleteStudent(String studentID) {
 	return true;
 
 }
