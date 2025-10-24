@@ -57,7 +57,9 @@ public void searchStudent(int ID){
             }
         }
 }
+ public void updateStudent(){
 
+ }
 
 
 
