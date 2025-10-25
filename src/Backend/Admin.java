@@ -13,8 +13,32 @@ public class Admin {
         listOfStudents = new ArrayList<Student>();
     }
 
-    public void addStudent(Student student) {
-        listOfStudents.add(student);
+    public void addStudent(Student student)throws IOException {
+        int checkID=student.getStudentID();
+        boolean isThere=false;
+        try (BufferedReader read = new BufferedReader(new FileReader(fileName))) {
+            String info;
+            while ((info = read.readLine()) != null) {
+                String[] splitInfo = info.split(",");
+                int ID = Integer.parseInt(splitInfo[0]);
+               if(ID==checkID)
+                   isThere=true;
+               else
+                   isThere=false;
+
+
+            }
+        } catch (Exception e) {
+            System.out.println("Cant load from file!");
+            e.printStackTrace();
+        }
+        if(isThere)
+        {
+            System.out.println("Student already exists");
+        }
+        else {
+            listOfStudents.add(student);
+        }
         System.out.println("Student was added successfully");
     }
     public ArrayList<Student> viewStudent() {
@@ -118,7 +142,7 @@ public class Admin {
             e.printStackTrace();
         }
     }
- public void sortGPA(){
+   public void sortGPA(String fileName) throws IOException{
 
  }
     
