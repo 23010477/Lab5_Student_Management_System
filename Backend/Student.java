@@ -1,14 +1,20 @@
 package Backend;
 
+import java.awt.Component;
+import java.sql.Array;
+import java.util.ArrayList;
+
+import javax.swing.JOptionPane;
+
 public class Student implements RecordsInterface {
-    private String studentID;
+    private int studentID;
     private String name;
     private int age;
     private String gender;
     private String department;
     private double gpa;
 
-    public Student(String studentID, String name, int age, String gender, String department, double gpa) {
+    public Student(int studentID, String name, int age, String gender, String department, double gpa) {
         this.studentID = studentID;
         this.name = name;
         this.age = age;
@@ -16,13 +22,32 @@ public class Student implements RecordsInterface {
         this.department = department;
         this.gpa = gpa;
     }
-
-	public String getStudentID() {
+    private boolean isIDUsed(int id) {
+    	ArrayList<Student> students = Admin.getListOfStudents()
+		for(int i=0 ; i<students.size();i++) {
+			Student s = students.get(i);
+			if(s.getStudentID() == id) {
+				return true;
+			}
+			
+    	}
+		return false;
+    }
+    
+	public int getStudentID() {
 		return studentID;
 	}
 
-	public void setStudentID(String studentID) {
-		this.studentID = studentID;
+	public void setStudentID(int studentID) {
+		if(studentID<=0 ) {
+			JOptionPane.showMessageDialog(null, "Student ID cannot be empty", "Input Error", JOptionPane.ERROR_MESSAGE);
+		}
+		else if (isIDUsed(studentID)) {
+            JOptionPane.showMessageDialog(null, "This Student ID already exists! Please choose another one.", "Input Error", JOptionPane.ERROR_MESSAGE);
+        } 
+		else {
+			this.studentID = studentID;
+		}
 	}
 
 	public String getName() {
