@@ -99,7 +99,12 @@ public class Student implements RecordsInterface {
 	}
 
 	public void setDepartment(String department) {
+		if(department==null||department.trim().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Department cannot be empty", "Input Error", JOptionPane.ERROR_MESSAGE);
+		}
+		else {
 		this.department = department;
+		}
 	}
 
 	public double getGpa() {
