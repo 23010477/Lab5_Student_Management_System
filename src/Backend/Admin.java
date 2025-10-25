@@ -166,6 +166,8 @@ public class Admin {
        }
        return listOfStudents;
  }
+    public ArrayList<Student> filterGPA(){
 
+    }
     
 }
