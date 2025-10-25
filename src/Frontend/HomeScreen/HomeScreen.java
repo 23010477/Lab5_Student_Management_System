@@ -1,11 +1,13 @@
 
-package src.Frontend.HomeScreen;
+package Frontend.HomeScreen;
 
 public class HomeScreen extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(HomeScreen.class.getName());
     public HomeScreen() {
         initComponents();
+        this.setSize(900, 600);
+        this.setLocationRelativeTo(null);
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -146,6 +148,8 @@ public class HomeScreen extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+        this.setVisible(false);
+        new Frontend.View.View().setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     public static void main(String args[]) {

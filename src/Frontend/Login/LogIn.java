@@ -1,8 +1,8 @@
 
-package src.Frontend.Login;
+package Frontend.Login;
 
 import javax.swing.JOptionPane;
-import src.Frontend.HomeScreen.HomeScreen;
+import Frontend.HomeScreen.HomeScreen;
 
 public class LogIn extends javax.swing.JFrame {
     
@@ -12,8 +12,8 @@ public class LogIn extends javax.swing.JFrame {
         setVisible(true);
         setSize(getPreferredSize());
         initComponents();
-        
-        
+        this.setSize(900, 600);
+        this.setLocationRelativeTo(null);
     }
 
     @SuppressWarnings("unchecked")
@@ -29,9 +29,12 @@ public class LogIn extends javax.swing.JFrame {
         jPasswordField1 = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(getPreferredSize());
+        setSize(new java.awt.Dimension(800, 500));
 
         jLayeredPane1.setBackground(new java.awt.Color(0, 0, 51));
         jLayeredPane1.setOpaque(true);
+        jLayeredPane1.setPreferredSize(new java.awt.Dimension(900, 600));
 
         jLabel1.setBackground(new java.awt.Color(102, 0, 51));
         jLabel1.setFont(new java.awt.Font("Arabic Typesetting", 1, 48)); // NOI18N
@@ -130,11 +133,11 @@ public class LogIn extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLayeredPane1)
+            .addComponent(jLayeredPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 876, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLayeredPane1)
+            .addComponent(jLayeredPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 589, Short.MAX_VALUE)
         );
 
         pack();
