@@ -2,9 +2,7 @@ package Backend;
 
 
 import javax.swing.*;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -96,8 +94,26 @@ try(PrintWriter studentInfo=new PrintWriter(new FileWriter(fileName))) {
 
  }
 
-public void loadFile(String fileName){
+public void loadFile(String fileName) throws IOException{
+        try(BufferedReader read=new BufferedReader(new FileReader(fileName))){
+            String info;
+            while((info=read.readLine())!=null){
+                String[] splitInfo=info.split(",");
 
+                int ID = Integer.parseInt(splitInfo[0]);
+                String name = splitInfo[1];
+                int age = Integer.parseInt(splitInfo[2]);
+                String gender = splitInfo[3];
+                String department = splitInfo[4];
+                double GPA = Double.parseDouble(splitInfo[5]);
+
+                Student student = new Student(ID, name, age, gender, department, GPA);
+                listOfStudents.add(student);
+            }
+        }catch(Exception e){
+            System.out.println("Cant load from file!");
+            e.printStackTrace();
+        }
 }
 
 
