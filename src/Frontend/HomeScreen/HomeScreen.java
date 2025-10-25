@@ -26,8 +26,9 @@ public class HomeScreen extends javax.swing.JFrame {
         jLayeredPane1.setBackground(new java.awt.Color(0, 0, 51));
         jLayeredPane1.setOpaque(true);
 
-        jLabel1.setBackground(new java.awt.Color(128, 14, 58));
+        jLabel1.setBackground(new java.awt.Color(102, 0, 51));
         jLabel1.setFont(new java.awt.Font("Sitka Text", 3, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Welcome To Our Program");
         jLabel1.setOpaque(true);
@@ -35,12 +36,14 @@ public class HomeScreen extends javax.swing.JFrame {
 
         jLabel2.setBackground(jLabel1.getBackground());
         jLabel2.setFont(new java.awt.Font("Sitka Text", 0, 24)); // NOI18N
+        jLabel2.setForeground(jLabel1.getForeground());
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("The Best Student Management System In The World");
         jLabel2.setOpaque(true);
 
         jButton1.setBackground(jLabel1.getBackground());
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jButton1.setForeground(jLabel1.getForeground());
         jButton1.setText("Add");
         jButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
         jButton1.setMargin(jButton4.getMargin());
@@ -52,12 +55,14 @@ public class HomeScreen extends javax.swing.JFrame {
 
         jButton2.setBackground(jLabel1.getBackground());
         jButton2.setFont(jButton1.getFont());
+        jButton2.setForeground(jLabel1.getForeground());
         jButton2.setText("Delete");
         jButton2.setBorder(jButton1.getBorder());
         jButton2.setMargin(jButton4.getMargin());
 
         jButton3.setBackground(jLabel1.getBackground());
         jButton3.setFont(jButton1.getFont());
+        jButton3.setForeground(jLabel1.getForeground());
         jButton3.setText("View");
         jButton3.setBorder(jButton1.getBorder());
         jButton3.setMargin(jButton4.getMargin());
@@ -70,6 +75,7 @@ public class HomeScreen extends javax.swing.JFrame {
 
         jButton4.setBackground(jLabel1.getBackground());
         jButton4.setFont(jButton1.getFont());
+        jButton4.setForeground(jLabel1.getForeground());
         jButton4.setText("Update");
         jButton4.setBorder(jButton1.getBorder());
         jButton4.setMargin(new java.awt.Insets(0, 20, 0, 20));
@@ -124,7 +130,7 @@ public class HomeScreen extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLayeredPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 900, Short.MAX_VALUE)
+            .addComponent(jLayeredPane1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
