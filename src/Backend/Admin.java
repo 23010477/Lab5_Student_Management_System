@@ -16,8 +16,7 @@ public class Admin {
         listOfStudents.add(student);
         System.out.println("Student was added successfully");
     }
-
-    public void viewStudent() {
+    public ArrayList<Student> viewStudent() {
         int size = listOfStudents.size();
         for (int i = 0; i < size - 1; i++) {
             for (int j = 0; j < size - i - 1; j++) {
@@ -31,6 +30,7 @@ public class Admin {
         for (Student student : listOfStudents) {
             System.out.println(student);
         }
+        return listOfStudents
     }
 
     public void deleteStudent(Student student) {
