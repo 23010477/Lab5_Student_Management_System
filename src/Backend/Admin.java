@@ -166,7 +166,18 @@ public class Admin {
        }
        return listOfStudents;
  }
-    public ArrayList<Student> filterGPA(){
+    public ArrayList<Student> filterGPA(double min){
+ArrayList<Student> filteredStudent=new ArrayList();
+ for(Student s:listOfStudents){
+     if(s.getGpa()>=min)
+         filteredStudent.add(s);
+ }
+ System.out.println("GPA filtered to show larger than or equal "+min);
+ for(Student s:filteredStudent)
+ {
+     System.out.println(s);
+ }
+ return filteredStudent;
 
     }
     
