@@ -2,6 +2,9 @@ package Backend;
 
 
 import javax.swing.*;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 public class Admin {
@@ -65,6 +68,20 @@ public void searchStudent(int ID){
     student.setName(name);
     student.setDepartment(department);
     System.out.println("Information updated! ");
+
+ }
+ public void writeToFile(String fileName) throws IOException {
+try(PrintWriter studentInfo=new PrintWriter(new FileWriter(fileName))) {
+    for (Student student : listOfStudents) {
+        studentInfo.println(student.getStudentID() + "," +
+                student.getName() + "," + student.getAge() + "," + student.getGender() + "," +
+                student.getDepartment() + "," + student.getGpa());
+    }
+    studentInfo.close();
+}catch(Exception e){
+    System.out.println("Cant save data"+e.printStackTrace());
+
+}
 
  }
 
