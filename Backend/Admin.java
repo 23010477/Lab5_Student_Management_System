@@ -6,6 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Admin {
     private ArrayList<Student> listOfStudents = new ArrayList<>();
@@ -60,13 +61,14 @@ public void searchStudent(int ID){
             }
         }
 }
- public void updateStudent(ٍStudent student){
+ public void updateStudent(Student student){
+        Scanner scanner=new Scanner(System.in);
     System.out.println(student);
-    student.setGpa(GPA);
-    student.setStudentID(ID);
-    student.setAge(age);
-    student.setName(name);
-    student.setDepartment(department);
+    student.setGpa(scanner.nextDouble());
+    student.setStudentID(scanner.nextInt());
+    student.setAge(scanner.nextInt());
+    student.setName(scanner.nextLine());
+    student.setDepartment(scanner.nextLine());
     System.out.println("Information updated! ");
 
  }
@@ -79,7 +81,8 @@ try(PrintWriter studentInfo=new PrintWriter(new FileWriter(fileName))) {
     }
     studentInfo.close();
 }catch(Exception e){
-    System.out.println("Cant save data"+e.printStackTrace());
+    System.out.println("Cant save data");
+    e.printStackTrace();
 
 }
 
