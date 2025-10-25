@@ -6,7 +6,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Admin {
-	public static ArrayList<Student> listOfStudents = new ArrayList<>();// here I changed it from private to public static so can call it in student class
+    public static ArrayList<Student> listOfStudents = new ArrayList<>();// here I changed it from private to public
+                                                                        // static so can call it in student class
 
     public Admin() {
         listOfStudents = new ArrayList<Student>();
@@ -37,67 +38,70 @@ public class Admin {
         System.out.println(student);
         int confirm = JOptionPane.showConfirmDialog(null, "Are you sure you want to delete this student?");
 
-if(confirm==0)
+        if (confirm == 0)
 
-    {
-        listOfStudents.remove(student);
-        JOptionPane.showMessageDialog(null, "Student got deleted!");
+        {
+            listOfStudents.remove(student);
+            JOptionPane.showMessageDialog(null, "Student got deleted!");
+        } else
+
+        {
+            JOptionPane.showMessageDialog(null, "It was not confirmed!");
+        }
+
     }
-else
 
-    {
-        JOptionPane.showMessageDialog(null, "It was not confirmed!");
-    }
-
-}
-public void searchStudent(int ID){
-        for(Student s:listOfStudents){
-            if(s.getStudentID()==ID)
-            {
+    public void searchStudent(int ID) {
+        for (Student s : listOfStudents) {
+            if (s.getStudentID() == ID) {
                 System.out.println(s);
             }
-        }
-}
- public void updateStudent(Student student){
-        Scanner scanner=new Scanner(System.in);
-    System.out.println(student);
-    System.out.println("Set the new GPA: ");
-    student.setGpa(scanner.nextDouble());
-     System.out.println("Set the new ID: ");
-    student.setStudentID(scanner.nextInt());
-     System.out.println("Set the new Age: ");
-    student.setAge(scanner.nextInt());
-     System.out.println("Set the new Name: ");
-    student.setName(scanner.nextLine());
-     System.out.println("Set the new Department: ");
-    student.setDepartment(scanner.nextLine());
-     System.out.println("Set the new Gender: ");
-     student.setGender(scanner.nextLine());
-    System.out.println("Information updated! ");
-
- }
- public void writeToFile(String fileName) throws IOException {
-try(PrintWriter studentInfo=new PrintWriter(new FileWriter(fileName))) {
-    for (Student student : listOfStudents) {
-        studentInfo.println(student.getStudentID() + "," +
-                student.getName() + "," + student.getAge() + "," + student.getGender() + "," +
-                student.getDepartment() + "," + student.getGpa());
+            else{
+                System.out.println("Student not found!");
+            }
+        } 
     }
-    studentInfo.close();
-}catch(Exception e){
-    System.out.println("Cant save data");
-    e.printStackTrace();
 
-}
+    public void updateStudent(Student student) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(student);
+        System.out.println("Set the new GPA: ");
+        student.setGpa(scanner.nextDouble());
+        System.out.println("Set the new ID: ");
+        student.setStudentID(scanner.nextInt());
+        System.out.println("Set the new Age: ");
+        student.setAge(scanner.nextInt());
+        System.out.println("Set the new Name: ");
+        student.setName(scanner.nextLine());
+        System.out.println("Set the new Department: ");
+        student.setDepartment(scanner.nextLine());
+        System.out.println("Set the new Gender: ");
+        student.setGender(scanner.nextLine());
+        System.out.println("Information updated! ");
 
+    }
 
- }
+    public void writeToFile(String fileName) throws IOException {
+        try (PrintWriter studentInfo = new PrintWriter(new FileWriter(fileName))) {
+            for (Student student : listOfStudents) {
+                studentInfo.println(student.getStudentID() + "," +
+                        student.getName() + "," + student.getAge() + "," + student.getGender() + "," +
+                        student.getDepartment() + "," + student.getGpa());
+            }
+            studentInfo.close();
+        } catch (Exception e) {
+            System.out.println("Cant save data");
+            e.printStackTrace();
 
-public void loadFile(String fileName) throws IOException{
-        try(BufferedReader read=new BufferedReader(new FileReader(fileName))){
+        }
+
+    }
+
+    public void loadFile(String fileName) throws IOException {
+        try (BufferedReader read = new BufferedReader(new FileReader(fileName))) {
             String info;
-            while((info=read.readLine())!=null){
-                String[] splitInfo=info.split(",");
+            while ((info = read.readLine()) != null) {
+                String[] splitInfo = info.split(",");
 
                 int ID = Integer.parseInt(splitInfo[0]);
                 String name = splitInfo[1];
@@ -109,11 +113,11 @@ public void loadFile(String fileName) throws IOException{
                 Student student = new Student(ID, name, age, gender, department, GPA);
                 listOfStudents.add(student);
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             System.out.println("Cant load from file!");
             e.printStackTrace();
         }
-}
+    }
 
-
+    
 }

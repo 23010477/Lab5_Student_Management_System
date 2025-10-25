@@ -1,8 +1,19 @@
 
-package Frontend.View;
+package src.Frontend.View;
+import src.Frontend.Login.*;
+import src.Main;
+import src.Backend.Admin;
+import src.Backend.Student;
+import src.Frontend.HomeScreen.HomeScreen;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.table.JTableHeader;
 
 public class View extends javax.swing.JFrame {
@@ -12,7 +23,23 @@ public class View extends javax.swing.JFrame {
     public View() {
         initComponents();
         this.setSize(900, 600);
+        jTable1.setRowHeight(30);
         this.setLocationRelativeTo(null);
+
+        DefaultTableModel model = new DefaultTableModel(
+        new String[]{"ID", "Name", "Age", "Gender", "Department", "GPA"}, 0
+        );
+        for (Student s : Admin.listOfStudents) {
+            model.addRow(new Object[]{
+                s.getStudentID(),
+                s.getName(),
+                s.getAge(),
+                s.getGender(),
+                s.getDepartment(),
+                s.getGpa()
+            });
+        }
+        jTable1.setModel(model);
     }
     
     @SuppressWarnings("unchecked")
@@ -42,7 +69,7 @@ public class View extends javax.swing.JFrame {
 
         jTable1.setBackground(jLabel1.getBackground());
         jTable1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jTable1.setForeground(new java.awt.Color(0, 0, 102));
+        jTable1.setForeground(new java.awt.Color(255, 255, 255));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
@@ -57,9 +84,16 @@ public class View extends javax.swing.JFrame {
             Class[] types = new Class [] {
                 java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Object.class, java.lang.String.class, java.lang.Double.class
             };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false
+            };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
             }
         });
         jTable1.setCellSelectionEnabled(true);
@@ -67,8 +101,6 @@ public class View extends javax.swing.JFrame {
         jTable1.setSelectionBackground(new java.awt.Color(0, 0, 102));
         jTable1.setSelectionForeground(new java.awt.Color(0, 0, 102));
         jTable1.setShowGrid(true);
-        jTable1.setShowHorizontalLines(true);
-        jTable1.setShowVerticalLines(true);
         jTable1.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(jTable1);
         jTable1.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_INTERVAL_SELECTION);
@@ -113,10 +145,6 @@ public class View extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
         
         try {

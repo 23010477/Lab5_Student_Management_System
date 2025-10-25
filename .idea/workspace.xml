@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dbac787d-99c0-49a7-8149-5ae64829f142" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/Backend/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/Backend/Student.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Backend/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Backend/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frontend/Login/LogIn$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/Login/LogIn$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frontend/Login/LogIn$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/Login/LogIn$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frontend/Login/LogIn$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/Login/LogIn$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frontend/Login/LogIn.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/Login/LogIn.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frontend/Login/LogIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/Login/LogIn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frontend/View/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/View/View.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frontend/View/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/View/View.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="34Z7CJK7L4jGLgPtikS1Hxorf6P" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.27397.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-IU-252.27397.103" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dbac787d-99c0-49a7-8149-5ae64829f142" name="Changes" comment="" />
+      <created>1761409114242</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1761409114242</updated>
+      <workItem from="1761409115644" duration="2000" />
+    </task>
+    <servers />
+  </component>
+</project>

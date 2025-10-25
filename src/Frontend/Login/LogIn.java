@@ -1,8 +1,8 @@
 
-package Frontend.Login;
+package src.Frontend.Login;
 
 import javax.swing.JOptionPane;
-import Frontend.HomeScreen.HomeScreen;
+import src.Frontend.HomeScreen.HomeScreen;
 
 public class LogIn extends javax.swing.JFrame {
     
