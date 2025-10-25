@@ -13,7 +13,7 @@ public class Admin {
         listOfStudents = new ArrayList<Student>();
     }
 
-    public void addStudent(Student student)throws IOException {
+    public void addStudent(Student student,String fileName)throws IOException {
         int checkID=student.getStudentID();
         boolean isThere=false;
         try (BufferedReader read = new BufferedReader(new FileReader(fileName))) {
@@ -21,11 +21,10 @@ public class Admin {
             while ((info = read.readLine()) != null) {
                 String[] splitInfo = info.split(",");
                 int ID = Integer.parseInt(splitInfo[0]);
-               if(ID==checkID)
-                   isThere=true;
-               else
-                   isThere=false;
-
+               if(ID==checkID) {
+                   isThere = true;
+               break;
+               }
 
             }
         } catch (Exception e) {
@@ -38,8 +37,9 @@ public class Admin {
         }
         else {
             listOfStudents.add(student);
+            System.out.println("Student was added successfully");
         }
-        System.out.println("Student was added successfully");
+
     }
     public ArrayList<Student> viewStudent() {
         int size = listOfStudents.size();
@@ -129,6 +129,7 @@ public class Admin {
     }
 
     public void loadFile(String fileName) throws IOException {
+        listOfStudents.clear();
         try (BufferedReader read = new BufferedReader(new FileReader(fileName))) {
             String info;
             while ((info = read.readLine()) != null) {
@@ -160,14 +161,14 @@ public class Admin {
                }
            }
        }
-       System.out.print("Sorted GPA high to low!");
+       System.out.println("Sorted GPA high to low!");
        for (Student student : listOfStudents) {
            System.out.println(student);
        }
        return listOfStudents;
  }
     public ArrayList<Student> filterGPA(double min){
-ArrayList<Student> filteredStudent=new ArrayList();
+ArrayList<Student> filteredStudent=new ArrayList<>();
  for(Student s:listOfStudents){
      if(s.getGpa()>=min)
          filteredStudent.add(s);
