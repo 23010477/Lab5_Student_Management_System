@@ -64,11 +64,18 @@ public void searchStudent(int ID){
  public void updateStudent(Student student){
         Scanner scanner=new Scanner(System.in);
     System.out.println(student);
+    System.out.println("Set the new GPA: ");
     student.setGpa(scanner.nextDouble());
+     System.out.println("Set the new ID: ");
     student.setStudentID(scanner.nextInt());
+     System.out.println("Set the new Age: ");
     student.setAge(scanner.nextInt());
+     System.out.println("Set the new Name: ");
     student.setName(scanner.nextLine());
+     System.out.println("Set the new Department: ");
     student.setDepartment(scanner.nextLine());
+     System.out.println("Set the new Gender: ");
+     student.setGender(scanner.nextLine());
     System.out.println("Information updated! ");
 
  }
@@ -86,9 +93,12 @@ try(PrintWriter studentInfo=new PrintWriter(new FileWriter(fileName))) {
 
 }
 
+
  }
 
+public void loadFile(String fileName){
 
+}
 
 
 }
