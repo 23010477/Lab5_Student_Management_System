@@ -73,6 +73,7 @@ public class Student implements RecordsInterface {
 		}
 		else {
 		this.age = age;
+		
 		}
 	}
 
