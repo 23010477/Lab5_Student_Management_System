@@ -55,7 +55,7 @@ public class Admin {
         for (Student student : listOfStudents) {
             System.out.println(student);
         }
-        return listOfStudents
+        return listOfStudents;
     }
 
     public void deleteStudent(Student student) {
@@ -76,14 +76,20 @@ public class Admin {
     }
 
     public void searchStudent(int ID) {
+       boolean isFound=false;
         for (Student s : listOfStudents) {
             if (s.getStudentID() == ID) {
                 System.out.println(s);
+                isFound=true;
+                break;
             }
-            else{
-                System.out.println("Student not found!");
-            }
-        } 
+        }
+        if(!isFound)
+        {
+            System.out.println("Student was not found");
+        }
+
+
     }
 
     public void updateStudent(Student student) {
@@ -95,6 +101,7 @@ public class Admin {
         student.setStudentID(scanner.nextInt());
         System.out.println("Set the new Age: ");
         student.setAge(scanner.nextInt());
+        scanner.nextLine();
         System.out.println("Set the new Name: ");
         student.setName(scanner.nextLine());
         System.out.println("Set the new Department: ");
