@@ -112,7 +112,7 @@ public class Student implements RecordsInterface {
 	}
 
 	public void setGpa(double gpa) {
-		if(Gpa<0.0||Gpa>4.0) {
+		if(gpa<0.0||gpa>4.0) {
             JOptionPane.showMessageDialog(null, "Please enter a valid Gpa", "Input Error", JOptionPane.ERROR_MESSAGE);
 
 		}
