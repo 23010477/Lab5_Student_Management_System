@@ -13,7 +13,8 @@ public class Student implements RecordsInterface {
     private String gender;
     private String department;
     private double gpa;
-
+    
+    
     public Student(int studentID, String name, int age, String gender, String department, double gpa) {
         this.studentID = studentID;
         this.name = name;
@@ -82,7 +83,7 @@ public class Student implements RecordsInterface {
 	}
 
 	public void setGender(String gender) {
-		if(gender==null||gender.trim().isEmpty()) {
+		if(!(gender==null||gender.trim().isEmpty())) {
             JOptionPane.showMessageDialog(null, "Gender cannot be empty", "Input Error", JOptionPane.ERROR_MESSAGE);
 		}
 		else if(gender.equalsIgnoreCase("Male") && !gender.equalsIgnoreCase("Female")) {
@@ -120,6 +121,11 @@ public class Student implements RecordsInterface {
 		this.gpa = gpa;
 		}
 	}
-    
+	
+public String toString() {
+    return "ID: " + studentID +
+           ", Name: " + name +", Age: " + age +", Gender: " + gender +", Department: " + department +", GPA: " + gpa;
+}
     
 }
+    
