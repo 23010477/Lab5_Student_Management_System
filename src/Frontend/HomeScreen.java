@@ -1,5 +1,5 @@
 
-package Frontend;
+package src.Frontend;
 
 public class HomeScreen extends javax.swing.JFrame {
     
