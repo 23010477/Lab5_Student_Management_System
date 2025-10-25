@@ -68,7 +68,7 @@ public class Student implements RecordsInterface {
 
 	public void setAge(int age) {
 		if(age<=0||age>100) {
-            JOptionPane.showMessageDialog(null, "Please enter a valid age .", "Input Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Please enter a valid age ", "Input Error", JOptionPane.ERROR_MESSAGE);
 
 		}
 		else {
@@ -82,7 +82,16 @@ public class Student implements RecordsInterface {
 	}
 
 	public void setGender(String gender) {
+		if(gender==null||gender.trim().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Gender cannot be empty", "Input Error", JOptionPane.ERROR_MESSAGE);
+		}
+		else if(gender.equalsIgnoreCase("Male") && !gender.equalsIgnoreCase("Female")) {
+            JOptionPane.showMessageDialog(null, "Gender must be 'Male' or 'Female'", "Input Error", JOptionPane.ERROR_MESSAGE);
+
+		}
+		else {
 		this.gender = gender;
+		}
 	}
 
 	public String getDepartment() {
