@@ -67,7 +67,14 @@ public class Student implements RecordsInterface {
 	}
 
 	public void setAge(int age) {
+		if(age<=0||age>100) {
+            JOptionPane.showMessageDialog(null, "Please enter a valid age .", "Input Error", JOptionPane.ERROR_MESSAGE);
+
+		}
+		else {
 		this.age = age;
+		
+		}
 	}
 
 	public String getGender() {
