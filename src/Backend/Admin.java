@@ -149,8 +149,23 @@ public class Admin {
             e.printStackTrace();
         }
     }
-   public void sortGPA(String fileName) throws IOException{
-
+   public ArrayList<Student> sortGPA(){
+       int size = listOfStudents.size();
+       for (int i = 0; i < size - 1; i++) {
+           for (int j = 0; j < size - i - 1; j++) {
+               if (listOfStudents.get(j).getGpa() < listOfStudents.get(j + 1).getGpa()) {
+                   Student temp = listOfStudents.get(j);
+                   listOfStudents.set(j, listOfStudents.get(j + 1));
+                   listOfStudents.set(j + 1, temp);
+               }
+           }
+       }
+       System.out.print("Sorted GPA high to low!");
+       for (Student student : listOfStudents) {
+           System.out.println(student);
+       }
+       return listOfStudents;
  }
+
     
 }
