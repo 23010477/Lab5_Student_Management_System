@@ -55,7 +55,11 @@ public class Student implements RecordsInterface {
 	}
 
 	public void setName(String name) {
-		this.name = name;
+		 if (name == null || name.trim().isEmpty()) {
+	            JOptionPane.showMessageDialog(null, "Name cannot be empty!", "Input Error", JOptionPane.ERROR_MESSAGE);
+	        } else {
+	            this.name = name.trim();
+	        }
 	}
 
 	public int getAge() {
