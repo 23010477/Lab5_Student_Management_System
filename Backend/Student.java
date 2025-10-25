@@ -23,7 +23,7 @@ public class Student implements RecordsInterface {
         this.gpa = gpa;
     }
     private boolean isIDUsed(int id) {
-    	ArrayList<Student> students = Admin.getListOfStudents()
+    	ArrayList<Student> students = Admin.listOfStudents;
 		for(int i=0 ; i<students.size();i++) {
 			Student s = students.get(i);
 			if(s.getStudentID() == id) {

@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Admin {
-    private ArrayList<Student> listOfStudents = new ArrayList<>();
+	public static ArrayList<Student> listOfStudents = new ArrayList<>();// here I changed it from private to public static so can call it in student class
 
     public Admin() {
         listOfStudents = new ArrayList<Student>();
