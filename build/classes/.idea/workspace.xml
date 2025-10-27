@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="be713134-084f-4fa7-9d1c-6a2d51720a09" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/build-impl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/genfiles.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/private/private.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/private/private.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Backend/Admin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Backend/RecordsInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Backend/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frontend/HomeScreen/HomeScreen$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frontend/HomeScreen/HomeScreen$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frontend/HomeScreen/HomeScreen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frontend/Login/LogIn$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frontend/Login/LogIn$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frontend/Login/LogIn$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frontend/Login/LogIn.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frontend/Login/LogIn.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/Login/LogIn.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frontend/View/View$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frontend/View/View.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;CozyMellow&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/23010477/Lab5_Student_Management_System.git&quot;,
+    &quot;accountId&quot;: &quot;0afa8933-3329-4996-b5b4-db223b51c64e&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="34YbYShSPl68xApvfc5hidgeEj9" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Lab5_Student_Management_System" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Lab5_Student_Management_System" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="be713134-084f-4fa7-9d1c-6a2d51720a09" name="Changes" comment="" />
+      <created>1761393500031</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1761393500031</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
