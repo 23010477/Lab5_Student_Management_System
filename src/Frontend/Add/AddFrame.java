@@ -278,7 +278,7 @@ public class AddFrame extends javax.swing.JFrame {
         double gpaNum = Double.parseDouble(strGpa);
 
         Student stu = new Student(studentNum, nm, ageNum, gen, dep, gpaNum);
-        adminSystem.addStudent(stu);
+        adminSystem.addStudent(stu,"students.txt");
         
 
         JOptionPane.showMessageDialog(this, "Student added Successfully!");

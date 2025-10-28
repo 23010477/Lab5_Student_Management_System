@@ -13,34 +13,33 @@ public class Admin {
         listOfStudents = new ArrayList<Student>();
     }
 
-    public void addStudent(Student student,String fileName)throws IOException {
-        int checkID=student.getStudentID();
-        boolean isThere=false;
+    public void addStudent(Student student, String fileName) throws IOException {
+        int checkID = student.getStudentID();
+        boolean isThere = false;
         try (BufferedReader read = new BufferedReader(new FileReader(fileName))) {
             String info;
             while ((info = read.readLine()) != null) {
                 String[] splitInfo = info.split(",");
                 int ID = Integer.parseInt(splitInfo[0]);
-               if(ID==checkID) {
-                   isThere = true;
-               break;
-               }
+                if (ID == checkID) {
+                    isThere = true;
+                    break;
+                }
 
             }
         } catch (Exception e) {
             System.out.println("Cant load from file!");
             e.printStackTrace();
         }
-        if(isThere)
-        {
+        if (isThere) {
             System.out.println("Student already exists");
-        }
-        else {
+        } else {
             listOfStudents.add(student);
             System.out.println("Student was added successfully");
         }
 
     }
+
     public ArrayList<Student> viewStudent() {
         int size = listOfStudents.size();
         for (int i = 0; i < size - 1; i++) {
@@ -76,19 +75,17 @@ public class Admin {
     }
 
     public void searchStudent(int ID) {
-       boolean isFound=false;
+        boolean isFound = false;
         for (Student s : listOfStudents) {
             if (s.getStudentID() == ID) {
                 System.out.println(s);
-                isFound=true;
+                isFound = true;
                 break;
             }
         }
-        if(!isFound)
-        {
+        if (!isFound) {
             System.out.println("Student was not found");
         }
-
 
     }
 
@@ -150,36 +147,37 @@ public class Admin {
             e.printStackTrace();
         }
     }
-   public ArrayList<Student> sortGPA(){
-       int size = listOfStudents.size();
-       for (int i = 0; i < size - 1; i++) {
-           for (int j = 0; j < size - i - 1; j++) {
-               if (listOfStudents.get(j).getGpa() < listOfStudents.get(j + 1).getGpa()) {
-                   Student temp = listOfStudents.get(j);
-                   listOfStudents.set(j, listOfStudents.get(j + 1));
-                   listOfStudents.set(j + 1, temp);
-               }
-           }
-       }
-       System.out.println("Sorted GPA high to low!");
-       for (Student student : listOfStudents) {
-           System.out.println(student);
-       }
-       return listOfStudents;
- }
-    public ArrayList<Student> filterGPA(double min){
-ArrayList<Student> filteredStudent=new ArrayList<>();
- for(Student s:listOfStudents){
-     if(s.getGpa()>=min)
-         filteredStudent.add(s);
- }
- System.out.println("GPA filtered to show larger than or equal "+min);
- for(Student s:filteredStudent)
- {
-     System.out.println(s);
- }
- return filteredStudent;
+
+    public ArrayList<Student> sortGPA() {
+        int size = listOfStudents.size();
+        for (int i = 0; i < size - 1; i++) {
+            for (int j = 0; j < size - i - 1; j++) {
+                if (listOfStudents.get(j).getGpa() < listOfStudents.get(j + 1).getGpa()) {
+                    Student temp = listOfStudents.get(j);
+                    listOfStudents.set(j, listOfStudents.get(j + 1));
+                    listOfStudents.set(j + 1, temp);
+                }
+            }
+        }
+        System.out.println("Sorted GPA high to low!");
+        for (Student student : listOfStudents) {
+            System.out.println(student);
+        }
+        return listOfStudents;
+    }
+
+    public ArrayList<Student> filterGPA(double min) {
+        ArrayList<Student> filteredStudent = new ArrayList<>();
+        for (Student s : listOfStudents) {
+            if (s.getGpa() >= min)
+                filteredStudent.add(s);
+        }
+        System.out.println("GPA filtered to show larger than or equal " + min);
+        for (Student s : filteredStudent) {
+            System.out.println(s);
+        }
+        return filteredStudent;
 
     }
-    
+
 }
