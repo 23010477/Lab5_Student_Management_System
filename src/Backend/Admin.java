@@ -31,7 +31,7 @@ public class Admin {
         for (Student student : listOfStudents) {
             System.out.println(student);
         }
-        return listOfStudents
+        return listOfStudents;
     }
 
     public void deleteStudent(Student student) {
