@@ -10,7 +10,7 @@ public class Admin {
                                                                         // static so can call it in student class
 
     public Admin() {
-        listOfStudents = new ArrayList<Student>();
+       
     }
 
     public void addStudent(Student student, String fileName) throws IOException {
@@ -32,9 +32,11 @@ public class Admin {
             e.printStackTrace();
         }
         if (isThere) {
+            
             System.out.println("Student already exists");
         } else {
             listOfStudents.add(student);
+            writeToFile("students.txt");
             System.out.println("Student was added successfully");
         }
 
@@ -60,14 +62,15 @@ public class Admin {
     public void deleteStudent(Student student) {
         System.out.println(student);
         int confirm = JOptionPane.showConfirmDialog(null, "Are you sure you want to delete this student?");
-
-        if (confirm == 0)
-
-        {
-            listOfStudents.remove(student);
-            JOptionPane.showMessageDialog(null, "Student got deleted!");
-        } else
-
+        try{
+            if (confirm == 0)
+            {
+                listOfStudents.remove(student);
+                writeToFile("students.txt");
+                JOptionPane.showMessageDialog(null, "Student got deleted!");
+            }    
+        }
+        catch (IOException e)
         {
             JOptionPane.showMessageDialog(null, "It was not confirmed!");
         }

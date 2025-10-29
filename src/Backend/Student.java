@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
 
-public class Student implements RecordsInterface {
+public class Student {
 	private int studentID;
 	private String name;
 	private int age;
@@ -14,6 +14,9 @@ public class Student implements RecordsInterface {
 	private String department;
 	private double gpa;
 
+	public Student(){
+		
+	}
 	public Student(int studentID, String name, int age, String gender, String department, double gpa) {
 		this.studentID = studentID;
 		this.name = name;
@@ -82,7 +85,7 @@ public class Student implements RecordsInterface {
 	}
 
 	public void setGender(String gender) {
-		if (!(gender == null || gender.trim().isEmpty())) {
+		if ((gender == null || gender.trim().isEmpty())) {
 			JOptionPane.showMessageDialog(null, "Gender cannot be empty", "Input Error", JOptionPane.ERROR_MESSAGE);
 		} else if (!gender.equalsIgnoreCase("Male") && !gender.equalsIgnoreCase("Female")) {
 			JOptionPane.showMessageDialog(null, "Gender must be 'Male' or 'Female'", "Input Error",

@@ -277,8 +277,22 @@ public class AddFrame extends javax.swing.JFrame {
         int ageNum = Integer.parseInt(strAge);
         double gpaNum = Double.parseDouble(strGpa);
 
-        Student stu = new Student(studentNum, nm, ageNum, gen, dep, gpaNum);
-        adminSystem.addStudent(stu,"students.txt");
+        Student stu = new Student();
+        
+        stu.setGpa(gpaNum);
+        stu.setAge(ageNum);
+        stu.setDepartment(dep);
+        stu.setGender(gen);
+        stu.setName(nm);
+        stu.setStudentID(studentNum);
+        if(stu.getGpa() == 0.0)
+        {
+            JOptionPane.showMessageDialog(this, "unable to add student!");
+
+        }
+        else{
+            adminSystem.addStudent(stu,"students.txt");
+        }
         
 
         JOptionPane.showMessageDialog(this, "Student added Successfully!");

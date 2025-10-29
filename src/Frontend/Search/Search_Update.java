@@ -152,7 +152,7 @@ public class Search_Update extends javax.swing.JFrame {
         updateButton1.setBackground(jLabel1.getBackground());
         updateButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         updateButton1.setForeground(jLabel1.getForeground());
-        updateButton1.setText("Delete");
+        updateButton1.setText("Back");
         updateButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 updateButton1ActionPerformed(evt);
@@ -204,8 +204,7 @@ public class Search_Update extends javax.swing.JFrame {
                                 .addGap(66, 66, 66)
                                 .addComponent(updateButton)
                                 .addGap(59, 59, 59)
-                                .addComponent(updateButton1)
-                                .addGap(41, 41, 41))
+                                .addComponent(updateButton1))
                             .addGroup(jLayeredPane1Layout.createSequentialGroup()
                                 .addComponent(newID, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(32, 32, 32)
@@ -217,8 +216,8 @@ public class Search_Update extends javax.swing.JFrame {
                                 .addGap(48, 48, 48)
                                 .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel7)
-                                    .addComponent(newGender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(27, 27, 27)))
+                                    .addComponent(newGender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(27, 27, 27)
                         .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(newDepartment, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
